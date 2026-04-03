@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Al-Huda AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial;
+      background: #0F3D2E;
+      color: white;
+      padding: 20px;
+    }
+
+    .card {
+      background: #1F6F78;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    #chatBox {
+      background: #0b2a20;
+      padding: 10px;
+      border-radius: 10px;
+      height: 300px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+
+    .user {
+      text-align: right;
+      margin: 5px;
+      color: #C8A951;
+    }
+
+    .ai {
+      text-align: left;
+      margin: 5px;
+    }
+
+    input {
+      padding: 10px;
+      width: 70%;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 10px;
+      background: #C8A951;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Al-Huda AI 🤖</h2>
+
+<div class="card">
+
+  <div id="chatBox"></div>
+
+  <input id="question" placeholder="Ask about Islam..." />
+  <button onclick="answer()">Ask</button>
+
+</div>
+
+<script>
+function answer() {
+  let q = document.getElementById("question").value.toLowerCase();
+  let res = "";
+
+  if (q.includes("sabr")) {
+    res = "🟢 Sabr\n📖 Quran 2:153\nAllah sabr walon ke saath hai.";
+  }
+  else if (q.includes("namaz")) {
+    res = "🟢 Namaz\n📖 Quran 2:43\nNamaz Allah se connection hai.";
+  }
+  else if (q.includes("dua")) {
+    res = "🟢 Dua\n📖 Quran 40:60\nAllah dua sunta hai.";
+  }
+  else {
+    res = "🤲 Ye sawal abhi add nahi hai.";
+  }
+
+  let chatBox = document.getElementById("chatBox");
+
+  chatBox.innerHTML += "<div class='user'>You: " + q + "</div>";
+  chatBox.innerHTML += "<div class='ai'>AI: " + res + "</div>";
+
+  document.getElementById("question").value = "";
+
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+</script>
+
+</body>
+</html>
