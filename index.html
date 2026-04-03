@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Al-Huda AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial;
+      background: #0F3D2E;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      background: #1F6F78;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background: #C8A951;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Al-Huda AI 🤖</h1>
+<p>Your Islamic Knowledge Companion</p>
+
+<div class="card">
+  <h3>Ask a Question</h3>
+  <input id="question" placeholder="Ask about Islam..." />
+  <br />
+  <button onclick="answer()">Ask</button>
+  <p id="response"></p>
+</div>
+
+<script>
+function answer() {
+  let q = document.getElementById("question").value.toLowerCase();
+  let res = "";
+
+  if (q.includes("sabr")) {
+    res = "Sabr ka matlab mushkil waqt me Allah par bharosa rakhna hai. (Quran 2:153)";
+  } else if (q.includes("namaz")) {
+    res = "Namaz Islam ka pillar hai aur Allah ke saath connection hai.";
+  } else {
+    res = "Iska jawab jald add kiya jayega InshaAllah.";
+  }
+
+  document.getElementById("response").innerText = res;
+}
+</script>
+
+</body>
+</html>
