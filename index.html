@@ -46,16 +46,26 @@
 </div>
 
 <script>
+
 function answer() {
   let q = document.getElementById("question").value.toLowerCase();
   let res = "";
 
-  
+  if (q.includes("sabr")) {
+    res = "🟢 Sabr ka matlab mushkil waqt me Allah par bharosa rakhna hai.\n\n📖 Quran: Surah Al-Baqarah (2:153)\n\n💡 Explanation: Sabr sirf chup rehna nahi, balki strong rehna hai.\n\n🔎 Aap ye bhi pooch sakte hain:\n- Sabr ka reward kya hai?\n- Musibat me kya kare?";
+  }
+
+  else if (q.includes("namaz")) {
+    res = "🟢 Namaz Islam ka pillar hai aur Allah se direct connection hai.\n\n📖 Quran: Surah Al-Baqarah (2:43)\n\n💡 Explanation: Roz 5 waqt namaz se insan Allah ke kareeb hota hai.\n\n🔎 Aap ye bhi pooch sakte hain:\n- Namaz ka tareeqa kya hai?\n- Namaz miss ho jaye to kya kare?";
+  }
+
+  else if (q.includes("gussa") || q.includes("anger")) {
+    res = "🟢 Gussa control karna Islam me bohot important hai.\n\n📖 Hadith: The strong person is one who controls anger.\n\n💡 Explanation: Gussa aane par chup rehna aur wuzu karna madad karta hai.\n\n🔎 Aap ye bhi pooch sakte hain:\n- Gussa control kaise kare?\n- Sabr aur gussa me kya relation hai?";
+  }
+
+  else {
+    res = "🤲 Is sawal ka jawab abhi add nahi hai.\nJald Al-Huda AI me add kiya jayega InshaAllah.";
   }
 
   document.getElementById("response").innerText = res;
 }
-</script>
-
-</body>
-</html>
