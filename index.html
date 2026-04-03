@@ -39,11 +39,13 @@
 <p>Your Islamic Knowledge Companion</p>
 
 <div class="card">
-  <h3>Ask a Question</h3>
+  <h3>Al-Huda AI Chat</h3>
+
+  <div id="chatBox" style="text-align:left; max-height:300px; overflow:auto; margin-bottom:10px;"></div>
+
   <input id="question" placeholder="Ask about Islam..." />
   <br /><br />
   <button onclick="answer()">Ask</button>
-  <p id="response"></p>
 </div>
 
 <script>
@@ -103,8 +105,12 @@ function answer() {
     res = "🤲 Ye sawal abhi system me nahi hai.\n\n🔎 Aap ye try kar sakte hain:\n- Sabr\n- Namaz\n- Zakat\n- Quran\n- Hadith\n- Dua\n\nInshaAllah future me aur strong AI banega.";
   }
 
-  document.getElementById("response").innerText = res;
-}
+  let chatBox = document.getElementById("chatBox");
+
+chatBox.innerHTML += "<p><b>You:</b> " + q + "</p>";
+chatBox.innerHTML += "<p><b>AI:</b> " + res + "</p>";
+
+document.getElementById("question").value = "";
 </script>
 
 </body>
