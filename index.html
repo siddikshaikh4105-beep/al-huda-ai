@@ -52,19 +52,55 @@ function answer() {
   let res = "";
 
   if (q.includes("sabr")) {
-    res = "🟢 Sabr ka matlab mushkil waqt me Allah par bharosa rakhna hai.\n\n📖 Quran: Surah Al-Baqarah (2:153)\n\n💡 Explanation: Sabr sirf chup rehna nahi, balki strong rehna hai.\n\n🔎 Aap ye bhi pooch sakte hain:\n- Sabr ka reward kya hai?\n- Musibat me kya kare?";
+    res = "🟢 Sabr (Patience)\n\n📖 Quran 2:153\nAllah sabr karne walon ke saath hai.\n\n💡 Sabr ka matlab strong rehna hai mushkil waqt me.\n\n🔎 Next:\n- Sabr ka reward kya hai?\n- Musibat me kya kare?";
   }
 
-  else if (q.includes("namaz")) {
-    res = "🟢 Namaz Islam ka pillar hai aur Allah se direct connection hai.\n\n📖 Quran: Surah Al-Baqarah (2:43)\n\n💡 Explanation: Roz 5 waqt namaz se insan Allah ke kareeb hota hai.\n\n🔎 Aap ye bhi pooch sakte hain:\n- Namaz ka tareeqa kya hai?\n- Namaz miss ho jaye to kya kare?";
+  else if (q.includes("namaz") || q.includes("salah")) {
+    res = "🟢 Salah (Namaz)\n\n📖 Quran 2:43\nNamaz establish karo.\n\n💡 Namaz Allah se direct connection hai.\n\n🔎 Next:\n- Namaz ka tareeqa?\n- Khushu kaise laaye?";
   }
 
-  else if (q.includes("gussa") || q.includes("anger")) {
-    res = "🟢 Gussa control karna Islam me bohot important hai.\n\n📖 Hadith: The strong person is one who controls anger.\n\n💡 Explanation: Gussa aane par chup rehna aur wuzu karna madad karta hai.\n\n🔎 Aap ye bhi pooch sakte hain:\n- Gussa control kaise kare?\n- Sabr aur gussa me kya relation hai?";
+  else if (q.includes("zakat")) {
+    res = "🟢 Zakat\n\n📖 Quran 9:60\nZakat gareebo ke liye hai.\n\n💡 Ye wealth purification hai.\n\n🔎 Next:\n- Zakat kaise calculate kare?\n- Kis ko dena chahiye?";
+  }
+
+  else if (q.includes("roza") || q.includes("fasting")) {
+    res = "🟢 Roza (Fasting)\n\n📖 Quran 2:183\nRoza farz kiya gaya.\n\n💡 Self-control aur taqwa ke liye.\n\n🔎 Next:\n- Roza rules kya hain?\n- Roza kab toot jata hai?";
+  }
+
+  else if (q.includes("hajj")) {
+    res = "🟢 Hajj\n\n📖 Quran 3:97\nHajj farz hai jo afford kare.\n\n💡 Life changing ibadat.\n\n🔎 Next:\n- Hajj steps kya hain?\n- Umrah kya hai?";
+  }
+
+  else if (q.includes("allah")) {
+    res = "🟢 Allah\n\n📖 Quran 112:1\nAllah ek hai.\n\n💡 Wo creator hai sabka.\n\n🔎 Next:\n- Allah ke 99 naam?\n- Allah ko kaise pehchane?";
+  }
+
+  else if (q.includes("prophet") || q.includes("muhammad")) {
+    res = "🟢 Prophet Muhammad ﷺ\n\n📖 Quran 33:21\nBest example.\n\n💡 Unki life follow karni chahiye.\n\n🔎 Next:\n- Seerah kya hai?\n- Sunnah kya hai?";
+  }
+
+  else if (q.includes("quran")) {
+    res = "🟢 Quran\n\n📖 Quran 2:2\nGuidance for mankind.\n\n💡 Allah ka kalam.\n\n🔎 Next:\n- Quran kaise samjhe?\n- Tafsir kya hai?";
+  }
+
+  else if (q.includes("hadith")) {
+    res = "🟢 Hadith\n\n📖 Sahih Bukhari\nProphet ke sayings.\n\n💡 Islam samajhne ka source.\n\n🔎 Next:\n- Sahih hadith kya hoti hai?\n- Hadith kaise padhe?";
+  }
+
+  else if (q.includes("jannah")) {
+    res = "🟢 Jannah\n\n📖 Quran 3:133\nJannah believers ke liye hai.\n\n💡 Eternal reward.\n\n🔎 Next:\n- Jannah me kya milega?\n- Kaise milegi?";
+  }
+
+  else if (q.includes("jahannam")) {
+    res = "🟢 Jahannam\n\n📖 Quran 4:56\nPunishment place.\n\n💡 Gunah se bachna zaroori.\n\n🔎 Next:\n- Kaun jata hai?\n- Kaise bache?";
+  }
+
+  else if (q.includes("dua")) {
+    res = "🟢 Dua\n\n📖 Quran 40:60\nAllah dua accept karta hai.\n\n💡 Direct connection.\n\n🔎 Next:\n- Dua kab accept hoti hai?\n- Kaunsi best dua hai?";
   }
 
   else {
-    res = "🤲 Is sawal ka jawab abhi add nahi hai.\nJald Al-Huda AI me add kiya jayega InshaAllah.";
+    res = "🤲 Ye sawal abhi system me nahi hai.\n\n🔎 Aap ye try kar sakte hain:\n- Sabr\n- Namaz\n- Zakat\n- Quran\n- Hadith\n- Dua\n\nInshaAllah future me aur strong AI banega.";
   }
 
   document.getElementById("response").innerText = res;
