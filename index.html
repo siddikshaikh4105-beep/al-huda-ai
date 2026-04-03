@@ -29,6 +29,7 @@
       background: #C8A951;
       border: none;
       border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -40,15 +41,14 @@
 <div class="card">
   <h3>Ask a Question</h3>
   <input id="question" placeholder="Ask about Islam..." />
-  <br />
+  <br /><br />
   <button onclick="answer()">Ask</button>
   <p id="response"></p>
 </div>
 
 <script>
-
 function answer() {
-  let q = let q = document.getElementById("question").value.toLowerCase();
+  let q = document.getElementById("question").value.toLowerCase();
   let res = "";
 
   if (q.includes("sabr")) {
@@ -69,3 +69,7 @@ function answer() {
 
   document.getElementById("response").innerText = res;
 }
+</script>
+
+</body>
+</html>
